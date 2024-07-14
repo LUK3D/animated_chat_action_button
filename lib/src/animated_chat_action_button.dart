@@ -191,8 +191,10 @@ class _AnimatedChatActionButtonState extends State<AnimatedChatActionButton> {
                     : (widget.backgroundColor ?? Colors.purple)
                         .withOpacity(backgroundOpacity),
                 foregroundColor: widget.isActive
-                    ? widget.foregroundColor
-                    : widget.foregroundColor ?? Colors.white,
+                    ? widget.activeForegroundColor
+                    : widget.activeForegroundColor ??
+                        widget.foregroundColor ??
+                        Colors.white,
                 child: Stack(
                   alignment: Alignment.center,
                   clipBehavior: Clip.antiAlias,
