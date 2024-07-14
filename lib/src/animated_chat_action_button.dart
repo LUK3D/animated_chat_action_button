@@ -2,21 +2,21 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:do_tween/do_tween.dart';
 
-/// ## Animated Action Button
-/// Ceates a button that can be dragged like whatsapp audio recording button
-///
-/// ### Example usage:
-/// ```dart
-/// AnimatedChatActionButton(
-///   onHold: (){
-///     //Start recording audio
-///   },
-///   onHoldEnd: (){
-///     ///Stop recording the audio
-///   },
-/// )
-///```
 class AnimatedChatActionButton extends StatefulWidget {
+  /// ## Animated Action Button
+  /// Ceates a button that can be dragged like whatsapp audio recording button
+  ///
+  /// ### Example usage:
+  /// ```dart
+  /// AnimatedChatActionButton(
+  ///   onHold: (){
+  ///     //Start recording audio
+  ///   },
+  ///   onHoldEnd: (){
+  ///     ///Stop recording the audio
+  ///   },
+  /// )
+  ///```
   const AnimatedChatActionButton({
     super.key,
     required this.onHold,
@@ -31,11 +31,13 @@ class AnimatedChatActionButton extends StatefulWidget {
     this.activeBackgroundColor,
   });
 
-  final Function(bool startRecording)? onDragEnd;
-
   ///### onHold()
   ///Triggered when the button is hold down
   final Function() onHold;
+
+  ///### onDragEnd()
+  ///Triggered when the button is dragged alwas to the top
+  final Function(bool startRecording)? onDragEnd;
 
   ///### onHoldEnd()
   /// Triggered when the button is released
