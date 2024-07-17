@@ -175,6 +175,7 @@ class _AnimatedChatActionButtonState extends State<AnimatedChatActionButton> {
       },
       onLongPressEnd: (details) {
         reset();
+        widget.onHoldEnd();
       },
       child: SizedBox(
         height: maxHeight,
